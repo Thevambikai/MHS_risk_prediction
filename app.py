@@ -12,7 +12,7 @@ scaler = joblib.load(scaler_path)
 # Set up the Streamlit app
 st.title('Maternal Health Risk Prediction')
 image_path = "Mathealth.jpg"
-st.image(image_path, caption='Maternal Health Dashboard', width=200)
+st.image(image_path, caption='Maternal Health Dashboard', width=400)
 # Input features from the user with validation
 st.sidebar.header('Input Parameters')
 age = st.sidebar.number_input('Age', min_value=10, max_value=100, value=25)
