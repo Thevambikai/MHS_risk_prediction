@@ -16,7 +16,7 @@ st.title('Maternal Health Risk Prediction')
 st.sidebar.header('Input Parameters')
 age = st.sidebar.number_input('Age', min_value=10, max_value=100, value=25)
 systolic_bp = st.sidebar.number_input('Systolic Blood Pressure (mm Hg)', min_value=80, max_value=200, value=120)
-bs = st.sidebar.number_input('Blood Sugar Level (mmol/l)', min_value=0, max_value=20, value=5, format="%.1f")
+bs = st.sidebar.number_input('Blood Sugar Level (mmol/l)', min_value=0.0, max_value=20.0, value=5.0, format="%.1f")
 body_temp = st.sidebar.number_input('Body Temperature (°F)', min_value=90.0, max_value=120.0, value=98.0, format="%.1f")
 # Validate inputs
 if age < 10 or age > 100:
