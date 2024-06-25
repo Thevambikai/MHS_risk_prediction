@@ -14,9 +14,17 @@ st.title('Maternal Health Risk Prediction')
 
 # Custom CSS to change button color
 st.markdown(
-    """
+   """
     <style>
     .stButton>button {
+        background-color: #4CAF50;
+        color: white;
+    }
+    .stButton>button:focus {
+        background-color: #4CAF50;
+        color: white;
+    }
+    .stButton>button:active {
         background-color: #4CAF50;
         color: white;
     }
