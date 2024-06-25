@@ -16,7 +16,7 @@ st.title('Maternal Health Risk Prediction')
 st.sidebar.header('Input Parameters')
 age = st.sidebar.number_input('Age', min_value=10, max_value=100, value=25)
 systolic_bp = st.sidebar.number_input('Systolic Blood Pressure (mm Hg)', min_value=80, max_value=200, value=120)
-bs = st.sidebar.number_input('Blood Sugar Level (mmol/l)', min_value=0, max_value=20, value=5)
+bs = st.sidebar.number_input('Blood Sugar Level (mmol/l)', min_value=0, max_value=200, value=100)
 body_temp = st.sidebar.number_input('Body Temperature (°F)', min_value=90.0, max_value=120.0, value=98.0, format="%.1f")
 
 # Validate inputs
@@ -24,9 +24,9 @@ if age < 10 or age > 100:
     st.sidebar.error("Age must be between 10 and 100.")
 if systolic_bp < 80 or systolic_bp > 200:
     st.sidebar.error("Systolic Blood Pressure must be between 80 and 200 mm Hg.")
-if bs < 0 or bs > 20:
+if bs < 0 or bs > 200:
     st.sidebar.error("Blood Sugar Level must be between 0 and 200 mg/dL.")
-if body_temp < 80.0 or body_temp > 120.0:
+if body_temp < 35.0 or body_temp > 100.0:
     st.sidebar.error("Body Temperature must be between 35.0 and 100.0 °C.")
 
 # Feature names (matching those used during training)
@@ -41,7 +41,7 @@ st.write(input_data)
 if st.button('Predict'):
     # Check if any validation errors exist
     validation_errors = False
-    if age < 10 or age > 100 or systolic_bp < 80 or systolic_bp > 200 or bs < 0 or bs > 20 or body_temp < 90.0 or body_temp > 120.0:
+    if age < 10 or age > 100 or systolic_bp < 80 or systolic_bp > 200 or bs < 0 or bs > 200 or body_temp < 35.0 or body_temp > 100.0:
         validation_errors = True
 
     if not validation_errors:
