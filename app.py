@@ -12,6 +12,19 @@ scaler = joblib.load(scaler_path)
 # Set up the Streamlit app
 st.title('Maternal Health Risk Prediction')
 
+# Custom CSS to change button color
+st.markdown(
+    """
+    <style>
+    .stButton>button {
+        background-color: #4CAF50;
+        color: white;
+    }
+    </style>
+    """,
+    unsafe_allow_html=True
+)
+
 # Input features from the user with validation
 st.sidebar.header('Input Parameters')
 age = st.sidebar.number_input('Age', min_value=10, max_value=100, value=25)
@@ -47,7 +60,6 @@ if st.button('Predict'):
     if not validation_errors:
         # Apply the same scaling to input data
         input_data_scaled = scaler.transform(input_data)
-        #st.write(input_data_scaled)
         # Make the prediction
         try:
             prediction = model.predict(input_data_scaled)
