@@ -47,7 +47,7 @@ if st.button('Predict'):
     if not validation_errors:
         # Apply the same scaling to input data
         input_data_scaled = scaler.transform(input_data)
-        st.write(input_data_scaled)
+        #st.write(input_data_scaled)
         # Make the prediction
         try:
             prediction = model.predict(input_data_scaled)
