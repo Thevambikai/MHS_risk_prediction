@@ -28,10 +28,7 @@ st.markdown(
         background-color: #4CAF50;
         color: white;
     }
-    .stButton>button:active {
-        background-color: #4CAF50;
-        color: white;
-    }
+    
     </style>
     """,
     unsafe_allow_html=True
