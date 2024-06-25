@@ -25,7 +25,7 @@ if systolic_bp < 80 or systolic_bp > 200:
     st.sidebar.error("Systolic Blood Pressure must be between 80 and 200 mm Hg.")
 if bs < 0 or bs > 200:
     st.sidebar.error("Blood Sugar Level must be between 0 and 200 mg/dL.")
-if body_temp < 35.0 or body_temp > 100.0:
+if body_temp < 35.0 or body_temp > 105.0:
     st.sidebar.error("Body Temperature must be between 35.0 and 100.0 °C.")
 
 # Feature names (matching those used during training)
