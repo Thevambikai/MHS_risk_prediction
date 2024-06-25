@@ -11,7 +11,7 @@ scaler = joblib.load(scaler_path)
 
 # Set up the Streamlit app
 st.title('Maternal Health Risk Prediction')
-image_path = "images.jpg"
+image_path = "Mat.png"
 st.image(image_path, caption='Maternal Health Dashboard', use_column_width=True)
 # Input features from the user with validation
 st.sidebar.header('Input Parameters')
