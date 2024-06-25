@@ -20,6 +20,10 @@ st.markdown(
         background-color: #4CAF50;
         color: white;
     }
+    .stButton>button:hover {
+        background-color: #4CAF50;
+        color: white;
+    }
     .stButton>button:focus {
         background-color: #4CAF50;
         color: white;
