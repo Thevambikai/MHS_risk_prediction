@@ -41,7 +41,7 @@ st.write(input_data)
 if st.button('Predict'):
     # Check if any validation errors exist
     validation_errors = False
-    if age < 10 or age > 100 or systolic_bp < 80 or systolic_bp > 200 or bs < 0 or bs > 200 or body_temp < 35.0 or body_temp > 105.0:
+    if age < 10 or age > 100 or systolic_bp < 80 or systolic_bp > 200 or bs < 0.00 or bs > 20.00 or body_temp < 90.0 or body_temp > 120.0:
         validation_errors = True
 
     if not validation_errors:
